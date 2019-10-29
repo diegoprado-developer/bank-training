@@ -1,5 +1,6 @@
 .wrapper-header  {
-    height: 30vh;
+    width: 100vw;
+    height: 35vh;
     padding: 30px;
     background: #dcbc81;
     color: #fff;
@@ -24,7 +25,7 @@
 @media screen and (min-width: 600px) {
 
     .wrapper-header {
-        height: 15vh;
+        height: 18vh;
     }
 
     .menu-header li {
