@@ -19,7 +19,7 @@ import { FooterComponent } from './footer/footer.component';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    MatDialogModule
+    MatDialogModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
