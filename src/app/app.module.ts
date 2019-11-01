@@ -1,8 +1,9 @@
-import { AuthService } from './../auth.service';
-import { AuthGuard } from './../auth.guard';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
+
+import { AuthService } from './../auth.service';
+import { AuthGuard } from './../auth.guard';
 
 import { MatDialogModule } from '@angular/material/dialog'
 import { AppRoutingModule } from './app-routing/app-routing.module';
@@ -17,6 +18,7 @@ import { HomeLogadaComponent } from './home-logada/home-logada.component';
 import { CadastroConcluidoComponent } from './cadastro-concluido/cadastro-concluido.component';
 import { AcessoNegadoComponent } from './acesso-negado/acesso-negado.component';
 import { LoginComponent } from './login/login.component';
+import { ModalNotCadastroComponent } from './modal-not-cadastro/modal-not-cadastro.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +30,8 @@ import { LoginComponent } from './login/login.component';
     HomeLogadaComponent,
     CadastroConcluidoComponent,
     AcessoNegadoComponent,
-    LoginComponent
+    LoginComponent,
+    ModalNotCadastroComponent,
   ],
   imports: [
     BrowserModule,
@@ -36,10 +39,8 @@ import { LoginComponent } from './login/login.component';
     MatDialogModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    AuthGuard,
-    AuthService
   ],
-  providers: [],
+  providers: [AuthGuard, AuthService],
   bootstrap: [AppComponent],
   schemas: [
     CUSTOM_ELEMENTS_SCHEMA
